@@ -1,0 +1,202 @@
+Create a React 18 + Vite frontend app for ResumeRAG, a hackathon-level demo. The app should have:
+
+Homepage
+
+Login page (with predefined demo credentials)
+
+Single dashboard page (CV upload → skill extraction → job match)
+
+Focus on clean design, smooth animations, usability, and hackathon-level simplicity. No fake testimonials or unnecessary features.
+
+Login Page (/login)
+
+Demo credentials (for hackathon demo):
+
+Email: admin@mail.com
+
+Password: admin123
+
+Simple form with:
+
+Email input
+
+Password input
+
+Login button
+
+On successful login → redirect to Dashboard
+
+Basic validation and error feedback
+
+Tailwind CSS styling with subtle animations
+
+Homepage (/)
+
+Hero section: "AI-Powered Resume & Job Matching"
+
+CTA button: “Go to Dashboard”
+
+Minimal layout with modern look and entrance animations
+
+No fake testimonials or complex features
+
+Dashboard Page (/dashboard)
+
+Core Functions:
+
+CV Upload
+
+Accept PDF only
+
+Drag-and-drop or click-to-browse
+
+Show upload progress and file name
+
+Skill Extraction
+
+Call Gemini API to validate CV and extract:
+
+Technical skills
+
+Roles
+
+Experience
+
+Display extracted skills as tags/badges
+
+Job Matching
+
+Button: “Check Job Match”
+
+Use extracted skills to call Adzuna API (https://developer.adzuna.com/)
+
+Display jobs in list/grid:
+
+Job title, company, location, salary
+
+Optional match score
+
+Button to view/apply
+
+Components & File Structure
+
+Dashboard Components (src/components/dashboard/):
+
+ResumeUpload.tsx
+
+SkillTags.tsx
+
+JobList.tsx
+
+JobCard.tsx
+
+Dashboard Page (src/app/dashboard/page.tsx):
+
+Import and use dashboard components
+
+Manage state for:
+
+Uploaded CV
+
+Extracted skills
+
+Job results
+
+Loading indicators and simple error handling
+
+Tailwind CSS + animations (fade-in, hover effects, progress bars)
+
+Homepage (src/app/page.tsx)
+
+Modern hero section
+
+CTA button → dashboard
+
+Optional API routes (src/app/api/dashboard/)
+
+/api/dashboard/upload-cv → upload PDF, call Gemini API
+
+/api/dashboard/job-match → fetch jobs from Adzuna
+
+API Integration
+
+Gemini API
+
+Validate uploaded CV
+
+Extract structured skills, roles, and experience
+
+Return JSON of extracted skills
+
+Adzuna API
+
+Endpoint:
+http://api.adzuna.com/v1/api/jobs/in/search/1?app_id={YOUR_APP_ID}&app_key={YOUR_APP_KEY}&results_per_page=50&what={skills}&where={location}
+
+Fetch jobs relevant to extracted skills
+
+Rank jobs based on skill overlap, experience, and location
+
+Environment Variables
+
+VITE_API_BASE_URL
+
+ADZUNA_APP_ID, ADZUNA_APP_KEY
+
+GEMINI_API_KEY
+
+Design & UX Guidelines
+
+Mobile-first, fully responsive
+
+Clean, modern Tailwind layout
+
+Smooth animations:
+
+Fade-in on page load
+
+Hover effects for job cards
+
+Progress bars for CV upload
+
+Minimalist, functional, hackathon-friendly
+
+Easy workflow:
+
+Login → 2. Upload CV → 3. See extracted skills → 4. Check job match → 5. View jobs
+
+State Management
+
+Zustand: global state for CV data, skills, job results
+
+React Query: API calls, caching, loading states
+
+Deliverables
+
+src/app/page.tsx → Homepage
+
+src/app/login/page.tsx → Login page with demo credentials
+
+src/app/dashboard/page.tsx → Dashboard page
+
+src/components/dashboard/ → All dashboard components (ResumeUpload, SkillTags, JobList, JobCard)
+
+Optional API routes in src/app/api/dashboard/
+
+Tailwind CSS-based layout with cool animations
+
+Integration instructions for adding dashboard to existing homepage
+
+Live WebApp URL and API access that solves the problem statement (hackathon requirement)
+
+Constraints
+
+Only homepage, login, and dashboard pages
+
+Hackathon-level simplicity, clean and functional
+
+No fake testimonials or unnecessary analytics
+
+Focus on CV → Skill Extraction → Job Match
+
+Provide live demo URL and API access for submission
