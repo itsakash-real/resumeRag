@@ -28,14 +28,11 @@
 
 ---
 
-## Demo Video
+## Demo Images/Video
 
 Watch the demo of the app in action:  
 
-<video controls width="600">
-  <source src="https://drive.google.com/uc?export=download&id=1K8Ag9SgafDk3tSKXzLU8TSgr878DQ-a9" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://youtu.be/rJwMCQyAiKY
 
 
 ---
