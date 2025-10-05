@@ -32,8 +32,16 @@
 
 Watch the demo of the app in action:  
 
-https://youtu.be/rJwMCQyAiKY
+[![Watch Demo](https://img.youtube.com/vi/rJwMCQyAiKY/0.jpg)](https://youtu.be/rJwMCQyAiKY)
 
+IMAGES
+<img width="1920" height="1742" alt="screencapture-127-0-0-1-5000-2025-10-05-22_03_02" src="https://github.com/user-attachments/assets/3fd20fe1-cbac-4e27-99cf-19982ce55c31" />
+
+<img width="1920" height="912" alt="screencapture-127-0-0-1-5000-login-2025-10-05-22_03_18" src="https://github.com/user-attachments/assets/2d5fa7d4-f0bd-4f11-b34e-f0a8e52150f7" />
+
+<img width="1920" height="912" alt="screencapture-127-0-0-1-5000-dashboard-2025-10-05-22_03_43" src="https://github.com/user-attachments/assets/79e780fa-6b40-4592-9622-0d6471490ef2" />
+
+<img width="1920" height="3805" alt="screencapture-127-0-0-1-5000-dashboard-2025-10-05-22_04_05" src="https://github.com/user-attachments/assets/f8d1fdfa-8e90-41a3-828a-a8f16240e5c5" />
 
 ---
 
