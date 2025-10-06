@@ -149,30 +149,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-12 bg-gradient-to-br from-indigo-600 to-purple-600">
-          <div className="container mx-auto px-4">
-            <div className="max-w-2xl mx-auto text-center space-y-4 text-white animate-in fade-in slide-in-from-bottom-2 duration-700">
-              <h2 className="text-2xl md:text-3xl font-black">
-                Ready to Transform Your Hiring?
-              </h2>
-              <p className="text-sm opacity-90">
-                Join thousands of companies and candidates finding their perfect match
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-                <Link href="/dashboard">
-                  <Button className="px-6 h-9 bg-white text-indigo-600 hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 text-sm font-bold" data-testid="button-start-today">
-                    Start Free Trial
-                  </Button>
-                </Link>
-                <Link href="/login">
-                  <Button variant="outline" className="px-6 h-9 border-2 border-white text-white hover:bg-white/10 transition-all duration-300 text-sm font-bold" data-testid="button-sign-in">
-                    Sign In
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+       
       </main>
 
       {/* Footer */}
