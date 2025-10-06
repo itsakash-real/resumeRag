@@ -180,7 +180,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
             <div className="text-sm text-gray-600">
-              © 2024 <span className="font-semibold">ResumeRAG</span>. All rights reserved.
+              © 2025 <span className="font-semibold">ResumeRAG</span>. All rights reserved.
             </div>
             <div className="flex items-center gap-6 text-xs text-gray-500">
               <a href="#" className="hover:text-black transition-colors">Terms of Service</a>
