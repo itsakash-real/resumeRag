@@ -5,7 +5,9 @@ const { extractTextFromPDF } = require('../services/parser.service');
 
 //MULTER CONFIGURATION
 const storage = multer.diskStorage({
-    destination: 'uploads/',
+    destination: (req, file, cb) => {
+        cb(null, 'uploads/');
+    },
     filename: (req, file, cb) => {
         cb(null, `${Date.now()}-${file.originalname}`);
     }

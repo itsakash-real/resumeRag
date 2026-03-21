@@ -17,7 +17,7 @@ app.get('/health', (req, res) => {
         status: 'ok',
         timestamp: new Date()
     });
-})
+});
 
 //START SERVER
 app.listen(PORT, () => {
