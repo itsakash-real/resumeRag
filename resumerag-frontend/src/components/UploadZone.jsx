@@ -27,8 +27,8 @@ export default function UploadZone({ onAnalyze, isLoading }) {
   })
 
   const scaleClass = isDragActive ? 'scale-[1.02]' : 'scale-100'
-  const activeBorder = isDragActive ? 'border-[var(--accent)]' : 'border-subtle hover:border-[var(--accent)]'
-  const activeBg = isDragActive ? 'bg-[var(--accent-tint)]' : 'bg-surface hover:bg-elevated'
+  const activeBorder = isDragActive ? 'border-primary' : 'border-subtle hover:border-gray-400'
+  const activeBg = isDragActive ? 'bg-gray-50' : 'bg-surface hover:bg-gray-50'
 
   const handleAnalyze = () => {
     if (selectedFile) onAnalyze(selectedFile)
@@ -38,7 +38,7 @@ export default function UploadZone({ onAnalyze, isLoading }) {
     <div className="w-full flex flex-col items-center">
       <div
         {...getRootProps()}
-        className={`w-full h-64 border-2 border-dashed rounded-2xl flex flex-col items-center justify-center transition-all duration-300 ease-out cursor-pointer ${scaleClass} ${activeBorder} ${activeBg} ${isLoading ? 'opacity-50 pointer-events-none' : ''}`}
+        className={`w-full h-64 border-2 border-dashed rounded-lg flex flex-col items-center justify-center transition-all duration-300 ease-out cursor-pointer ${scaleClass} ${activeBorder} ${activeBg} ${isLoading ? 'opacity-50 pointer-events-none' : ''}`}
       >
         <input {...getInputProps()} />
         <svg
@@ -67,7 +67,7 @@ export default function UploadZone({ onAnalyze, isLoading }) {
 
       {selectedFile && !error && (
         <div className="mt-6 w-full animate-fade-in">
-          <div className="flex items-center justify-between bg-surface border border-subtle rounded-xl px-4 py-3 mb-4">
+          <div className="flex items-center justify-between bg-surface border border-subtle rounded-lg px-4 py-3 mb-4">
             <div className="flex items-center gap-3 truncate">
               <div className="w-6 h-6 rounded-full bg-[var(--success)]/20 flex items-center justify-center flex-shrink-0">
                 <svg className="w-3.5 h-3.5 text-[var(--success)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -86,7 +86,7 @@ export default function UploadZone({ onAnalyze, isLoading }) {
           <button
             onClick={handleAnalyze}
             disabled={isLoading}
-            className="w-full premium-button shimmer-effect py-3.5 rounded-xl flex items-center justify-center gap-2"
+            className="w-full primary-btn py-3.5 rounded-lg flex items-center justify-center gap-2 mt-4"
           >
             {isLoading ? (
               <span className="animate-pulse">Initializing...</span>

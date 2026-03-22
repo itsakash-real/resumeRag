@@ -12,7 +12,7 @@ export default function JobCard({ job, index = 0 }) {
 
   return (
     <div
-      className="bg-surface border border-subtle rounded-xl flex flex-col relative overflow-hidden transition-all duration-200 hover:border-hover hover:-translate-y-0.5 animate-fade-in group"
+      className="bg-surface border border-subtle rounded-lg flex flex-col relative overflow-hidden transition-all duration-200 hover:border-hover hover:-translate-y-0.5 animate-fade-in group"
       style={{ animationDelay: `${index * 0.05}s` }}
     >
       <div
@@ -60,7 +60,6 @@ export default function JobCard({ job, index = 0 }) {
           <p className="text-[14px] text-secondary leading-relaxed line-clamp-2">
             {job.description}
           </p>
-          <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-[var(--bg-surface)] to-transparent pointer-events-none" />
         </div>
 
         <div className="mt-auto border-t border-subtle pt-4">
@@ -68,11 +67,11 @@ export default function JobCard({ job, index = 0 }) {
             href={job.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full border border-subtle rounded-lg py-2 flex items-center justify-center gap-2 text-sm font-semibold text-primary transition-all duration-200 hover:bg-elevated hover:border-hover group/btn"
+            className="w-full secondary-btn py-2 text-sm group/btn"
           >
             <span>Review & Apply</span>
             <svg
-              className="w-4 h-4 text-muted transition-transform group-hover/btn:translate-x-1 group-hover/btn:text-primary"
+              className="w-4 h-4 text-muted transition-transform group-hover/btn:translate-x-1"
               fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />

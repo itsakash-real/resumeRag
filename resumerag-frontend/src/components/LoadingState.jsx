@@ -35,8 +35,8 @@ export default function LoadingState() {
   return (
     <div className="w-full max-w-sm bg-base border border-subtle rounded-xl p-6 font-mono font-medium">
       <div className="flex items-center justify-between mb-6 pb-4 border-b border-subtle">
-        <span className="text-secondary text-xs uppercase tracking-widest">Process Log</span>
-        <span className="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse-glow" />
+        <span className="text-secondary text-xs uppercase tracking-widest font-semibold">Process Log</span>
+        <span className="w-2 h-2 rounded-full bg-success" />
       </div>
 
       <div className="relative pl-3 space-y-6">
@@ -64,7 +64,7 @@ export default function LoadingState() {
               </div>
 
               <div className="flex-1 min-w-0">
-                <div className={`text-sm ${isDone ? 'text-secondary line-through decoration-subtle' : isActive ? 'text-accent drop-shadow-[0_0_8px_rgba(108,110,247,0.4)]' : 'text-secondary'}`}>
+                <div className={`text-sm font-semibold pl-1 ${isDone ? 'text-secondary line-through decoration-subtle font-normal' : isActive ? 'text-primary' : 'text-secondary font-normal'}`}>
                   {step.label}
                 </div>
                 {isActive && (

@@ -3,16 +3,14 @@ export default function ProfileCard({ profile }) {
     const isTech = /js|react|python|node|aws|sql|typescript|docker|git|api/i.test(skill)
     const isSoft = /lead|manage|commun|team|agile/i.test(skill)
 
-    if (isTech) return { bg: 'rgba(108,110,247,0.1)', text: 'var(--accent)', border: 'rgba(108,110,247,0.2)' }
-    if (isSoft) return { bg: 'var(--bg-elevated)', text: 'var(--text-secondary)', border: 'var(--border)' }
+    if (isTech) return { bg: '#f3f4f6', text: '#111827', border: '#e5e7eb' }
+    if (isSoft) return { bg: '#ffffff', text: '#4b5563', border: '#eaeaea' }
 
-    return { bg: 'rgba(245, 166, 35, 0.08)', text: 'var(--warning)', border: 'rgba(245, 166, 35, 0.2)' }
+    return { bg: '#fffbeb', text: '#92400e', border: '#fde68a' }
   }
 
   return (
-    <div className="bg-elevated border border-subtle rounded-2xl p-8 shadow-2xl relative overflow-hidden group">
-
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.15)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+    <div className="bg-surface border border-subtle rounded-lg p-8 shadow-sm relative overflow-hidden group">
 
       <div className="flex flex-col md:flex-row gap-8">
         <div className="flex-shrink-0 flex flex-col justify-center items-center md:items-start md:w-32 md:border-r border-subtle md:pr-6">
@@ -40,7 +38,7 @@ export default function ProfileCard({ profile }) {
             ))}
           </div>
 
-          <blockquote className="border-l-2 border-[var(--accent)] pl-4 py-1">
+          <blockquote className="border-l-2 border-primary pl-4 py-1">
             <p className="text-secondary text-sm leading-relaxed max-w-2xl">
               "{profile.summary}"
             </p>
