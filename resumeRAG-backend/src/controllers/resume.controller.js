@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs').promises;
 const fsSync = require('fs');
 const multer = require('multer');
-const { extractTextFromPDF } = require('../services/parser.service');
+const { extractTextFromPDFBuffer } = require('../services/parser.service');
 const { extractProfileFromResume } = require('../services/extractor.service');
 const { buildIndex, queryIndex } = require('../services/faiss.service');
 const { fetchJobsBySkills } = require('../services/jobs.service');
@@ -73,18 +73,7 @@ const matchResume = async (req, res) => {
 };
 
 //MULTER CONFIGURATION
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    const dir = 'uploads/';
-    if (!fsSync.existsSync(dir)) {
-      fsSync.mkdirSync(dir, { recursive: true });
-    }
-    cb(null, 'uploads/');
-  },
-  filename: (req, file, cb) => {
-    cb(null, `${Date.now()}-${file.originalname}`);
-  }
-});
+const storage = multer.memoryStorage();
 
 const fileFilter = (req, file, cb) => {
   if (file.mimetype === 'application/pdf') {
@@ -109,23 +98,14 @@ const uploadResume = async (req, res) => {
     });
   }
 
-  const filePath = req.file.path;
-
   try {
-    const extractedText = await extractTextFromPDF(filePath);
-    await fs.unlink(filePath);
+    const extractedText = await extractTextFromPDFBuffer(req.file.buffer);
 
     return res.status(200).json({
       success: true,
       text: extractedText
     });
   } catch (error) {
-    try {
-      await fs.unlink(filePath);
-    } catch {
-
-    }
-
     return res.status(500).json({
       success: false,
       error: error.message

@@ -10,9 +10,9 @@ const PORT = process.env.PORT || 3000;
 
 //MIDDLEWARE
 app.use(cors({
-  origin: 'http://localhost:5173',
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type']
+  origin: process.env.FRONTEND_URL || '*',
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }))
 app.use(express.json());
 app.use('/api/jobs', jobRoutes);
@@ -33,4 +33,6 @@ initModel().then(() => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`)
 });
+
+module.exports = app;
 

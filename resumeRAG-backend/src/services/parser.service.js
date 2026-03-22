@@ -1,9 +1,7 @@
-const fs = require('fs').promises;
 const pdfParse = require('pdf-parse');
 
-async function extractTextFromPDF(filePath) {
+async function extractTextFromPDFBuffer(fileBuffer) {
     try {
-        const fileBuffer = await fs.readFile(filePath);
         const pdfData = await pdfParse(fileBuffer);
         return pdfData.text.trim();
     } catch (error) {
@@ -11,4 +9,4 @@ async function extractTextFromPDF(filePath) {
     }
 }
 
-module.exports = { extractTextFromPDF };
+module.exports = { extractTextFromPDFBuffer };
