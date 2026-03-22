@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 720" width="860" height="720" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="860" height="720" fill="#0f172a" rx="12"/>
+
+  <!-- ── LAYER LABELS ── -->
+  <text x="18" y="130" fill="#475569" font-size="10" font-weight="600" letter-spacing="2" transform="rotate(-90,18,130)">FRONTEND</text>
+  <text x="18" y="330" fill="#475569" font-size="10" font-weight="600" letter-spacing="2" transform="rotate(-90,18,330)">BACKEND</text>
+  <text x="18" y="530" fill="#475569" font-size="10" font-weight="600" letter-spacing="2" transform="rotate(-90,18,530)">EXTERNAL</text>
+  <text x="18" y="680" fill="#475569" font-size="10" font-weight="600" letter-spacing="2" transform="rotate(-90,18,680)">LOCAL ML</text>
+
+  <!-- ── LAYER DIVIDERS ── -->
+  <line x1="36" y1="210" x2="840" y2="210" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <line x1="36" y1="430" x2="840" y2="430" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <line x1="36" y1="600" x2="840" y2="600" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <!-- ══════════════════════════════════
+       LAYER 1 — FRONTEND
+  ══════════════════════════════════ -->
+
+  <!-- UploadZone -->
+  <rect x="50" y="40" width="148" height="64" rx="8" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="124" y="67" fill="#a5b4fc" font-size="13" font-weight="700" text-anchor="middle">UploadZone</text>
+  <text x="124" y="85" fill="#64748b" font-size="11" text-anchor="middle">react-dropzone</text>
+
+  <!-- LoadingState -->
+  <rect x="228" y="40" width="148" height="64" rx="8" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="302" y="67" fill="#a5b4fc" font-size="13" font-weight="700" text-anchor="middle">LoadingState</text>
+  <text x="302" y="85" fill="#64748b" font-size="11" text-anchor="middle">setTimeout steps</text>
+
+  <!-- ProfileCard -->
+  <rect x="406" y="40" width="148" height="64" rx="8" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="480" y="67" fill="#a5b4fc" font-size="13" font-weight="700" text-anchor="middle">ProfileCard</text>
+  <text x="480" y="85" fill="#64748b" font-size="11" text-anchor="middle">skills · titles · summary</text>
+
+  <!-- JobCard -->
+  <rect x="584" y="40" width="148" height="64" rx="8" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="658" y="67" fill="#a5b4fc" font-size="13" font-weight="700" text-anchor="middle">JobCard</text>
+  <text x="658" y="85" fill="#64748b" font-size="11" text-anchor="middle">score badge · apply</text>
+
+  <!-- App.jsx state machine bar -->
+  <rect x="50" y="122" width="682" height="30" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="391" y="142" fill="#94a3b8" font-size="11" text-anchor="middle">App.jsx — state machine: idle → loading → results → error  ·  Vite  ·  Tailwind CSS  ·  axios</text>
+
+  <!-- frontend → backend arrow -->
+  <line x1="391" y1="152" x2="391" y2="230" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" stroke-dasharray="4 3"/>
+  <rect x="302" y="170" width="178" height="18" rx="4" fill="#0f172a"/>
+  <text x="391" y="183" fill="#64748b" font-size="10" text-anchor="middle">axios · multipart/form-data · JSON</text>
+
+  <!-- ══════════════════════════════════
+       LAYER 2 — BACKEND
+  ══════════════════════════════════ -->
+
+  <!-- middleware bar -->
+  <rect x="50" y="228" width="682" height="24" rx="5" fill="#1e1f2e" stroke="#334155" stroke-width="1"/>
+  <text x="391" y="244" fill="#64748b" font-size="10" text-anchor="middle">Middleware: cors  ·  express.json  ·  express-rate-limit (10 req/hr/IP)  ·  input validation  ·  magic-byte check</text>
+
+  <!-- POST /upload -->
+  <rect x="50" y="270" width="190" height="76" rx="8" fill="#1e293b" stroke="#14b8a6" stroke-width="1.5"/>
+  <text x="145" y="294" fill="#5eead4" font-size="13" font-weight="700" text-anchor="middle">POST /upload</text>
+  <text x="145" y="312" fill="#64748b" font-size="11" text-anchor="middle">multer · pdf-parse</text>
+  <text x="145" y="328" fill="#64748b" font-size="11" text-anchor="middle">file-type validation</text>
+
+  <!-- POST /analyze -->
+  <rect x="268" y="270" width="190" height="76" rx="8" fill="#1e293b" stroke="#14b8a6" stroke-width="1.5"/>
+  <text x="363" y="294" fill="#5eead4" font-size="13" font-weight="700" text-anchor="middle">POST /analyze</text>
+  <text x="363" y="312" fill="#64748b" font-size="11" text-anchor="middle">extractor.service.js</text>
+  <text x="363" y="328" fill="#64748b" font-size="11" text-anchor="middle">prompt engineering</text>
+
+  <!-- POST /match -->
+  <rect x="486" y="270" width="190" height="76" rx="8" fill="#1e293b" stroke="#14b8a6" stroke-width="1.5"/>
+  <text x="581" y="294" fill="#5eead4" font-size="13" font-weight="700" text-anchor="middle">POST /match</text>
+  <text x="581" y="312" fill="#64748b" font-size="11" text-anchor="middle">rate-limited 10/hr</text>
+  <text x="581" y="328" fill="#64748b" font-size="11" text-anchor="middle">faiss.service.js</text>
+
+  <!-- backend service arrows down to external -->
+  <!-- /analyze → Gemini -->
+  <line x1="363" y1="346" x2="260" y2="448" stroke="#f97316" stroke-width="1.5" marker-end="url(#arr-orange)"/>
+  <!-- /match → Adzuna -->
+  <line x1="581" y1="346" x2="520" y2="448" stroke="#f97316" stroke-width="1.5" marker-end="url(#arr-orange)"/>
+  <!-- /match → FAISS (dashed blue) -->
+  <line x1="620" y1="346" x2="720" y2="448" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)" stroke-dasharray="5 3"/>
+
+  <!-- ══════════════════════════════════
+       LAYER 3 — EXTERNAL APIs
+  ══════════════════════════════════ -->
+
+  <!-- Gemini -->
+  <rect x="100" y="448" width="220" height="76" rx="8" fill="#1e293b" stroke="#f97316" stroke-width="1.5"/>
+  <text x="210" y="472" fill="#fb923c" font-size="13" font-weight="700" text-anchor="middle">Gemini 1.5 Flash</text>
+  <text x="210" y="490" fill="#64748b" font-size="11" text-anchor="middle">google/generative-ai SDK</text>
+  <text x="210" y="506" fill="#64748b" font-size="11" text-anchor="middle">system prompt · JSON schema</text>
+
+  <!-- Adzuna -->
+  <rect x="370" y="448" width="220" height="76" rx="8" fill="#1e293b" stroke="#f97316" stroke-width="1.5"/>
+  <text x="480" y="472" fill="#fb923c" font-size="13" font-weight="700" text-anchor="middle">Adzuna Jobs API</text>
+  <text x="480" y="490" fill="#64748b" font-size="11" text-anchor="middle">top-3 skill query</text>
+  <text x="480" y="506" fill="#64748b" font-size="11" text-anchor="middle">20 listings · normalised</text>
+
+  <!-- Adzuna → faiss.service (results flow down to ML) -->
+  <line x1="480" y1="524" x2="680" y2="618" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)" stroke-dasharray="5 3"/>
+
+  <!-- ══════════════════════════════════
+       LAYER 4 — LOCAL ML
+  ══════════════════════════════════ -->
+
+  <!-- embeddings.service -->
+  <rect x="100" y="618" width="240" height="76" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="220" y="642" fill="#60a5fa" font-size="13" font-weight="700" text-anchor="middle">embeddings.service.js</text>
+  <text x="220" y="660" fill="#64748b" font-size="11" text-anchor="middle">MiniLM L6 v2 · 384-dim</text>
+  <text x="220" y="676" fill="#64748b" font-size="11" text-anchor="middle">loaded once · runs locally</text>
+
+  <!-- FAISS -->
+  <rect x="390" y="618" width="240" height="76" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="510" y="642" fill="#60a5fa" font-size="13" font-weight="700" text-anchor="middle">FAISS IndexFlatIP</text>
+  <text x="510" y="660" fill="#64748b" font-size="11" text-anchor="middle">buildIndex · queryIndex</text>
+  <text x="510" y="676" fill="#64748b" font-size="11" text-anchor="middle">cosine sim · top-N results</text>
+
+  <!-- faiss box (blue dashed, dropped from /match above) -->
+  <rect x="650" y="448" width="180" height="76" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="740" y="472" fill="#60a5fa" font-size="13" font-weight="700" text-anchor="middle">faiss.service.js</text>
+  <text x="740" y="490" fill="#64748b" font-size="11" text-anchor="middle">calls embeddings</text>
+  <text x="740" y="506" fill="#64748b" font-size="11" text-anchor="middle">builds vector index</text>
+
+  <!-- faiss.service → embeddings -->
+  <line x1="700" y1="524" x2="340" y2="640" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)" stroke-dasharray="5 3"/>
+  <!-- faiss.service → FAISS index -->
+  <line x1="740" y1="524" x2="580" y2="616" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)" stroke-dasharray="5 3"/>
+
+  <!-- embeddings → FAISS (horizontal) -->
+  <line x1="340" y1="658" x2="388" y2="658" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+
+  <!-- ── LEGEND ── -->
+  <rect x="50" y="706" width="10" height="10" rx="2" fill="#6366f1"/>
+  <text x="66" y="716" fill="#64748b" font-size="10">React components</text>
+  <rect x="190" y="706" width="10" height="10" rx="2" fill="#14b8a6"/>
+  <text x="206" y="716" fill="#64748b" font-size="10">Express endpoints &amp; services</text>
+  <rect x="390" y="706" width="10" height="10" rx="2" fill="#f97316"/>
+  <text x="406" y="716" fill="#64748b" font-size="10">External APIs</text>
+  <rect x="510" y="706" width="10" height="10" rx="2" fill="#3b82f6"/>
+  <text x="526" y="716" fill="#64748b" font-size="10">Local ML (no API cost)</text>
+  <line x1="670" y1="711" x2="700" y2="711" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-blue)"/>
+  <text x="706" y="716" fill="#64748b" font-size="10">ML data flow</text>
+
+</svg>
