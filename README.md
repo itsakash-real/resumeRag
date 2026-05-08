@@ -10,7 +10,6 @@ Drop in a resume. The app extracts your skills and experience using Gemini, fetc
 
 No keyword stuffing. No manual filters. Just semantic closeness between what you do and what the role needs.
 
-> **Live demo:** *(add your Vercel URL here)*
 
 ---
 
@@ -187,7 +186,3 @@ docs/
 - **Streaming responses** — stream Gemini output token-by-token to the frontend instead of waiting for the full JSON
 
 ---
-
-## License
-
-MIT
